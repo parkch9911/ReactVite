@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+#root .welcome:hover{
+  color: dodgerblue;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#root .box{
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+#root .box.active{
+  background-color: coral;
+  transform: scale(1.1);
+}
+#root .nameCard{
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+#root .nameCard p{
+  color: dodgerblue;
+  font-weight: 600;
+  font-size: 20px;
+}
+#root .Ex02box{
+  background-color: rgb(69, 192, 151);
+  padding: 20px;
+  border-radius: 10px;
+}
+ .header {
+ position: fixed; /* 상단 고정 */
+ top: 0;
+ left: 0;
+ width: 100%;
+ padding: 20px; /* 여백 추가 */
+ background-color: skyblue;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 */
+ }
+ main {
+ margin: 200px auto;
+ }
+ .footer {
+ position: fixed; /* 하단 고정 */
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ padding: 10px;
+ background-color: lightgray;
+ text-align: center;
+ }
+ #root .food-card{
+  background-color: orange;
+  margin: 30px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 5px solid orangered;
+ }
+ #root .detail{
+  color: white;
+  font-weight: 500;
+ }
+ #root .price{
+  color: red;
+  font-weight: 900;
+ }
+ #root ul{
+  background-color: rgb(38, 40, 49);
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+ }
+ #root .list .listText{
+  color: white;
+ }
