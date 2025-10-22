@@ -31,6 +31,25 @@ import Product from './propsComponents/props03.jsx'
 import Counter01 from './propsComponents/statecount.jsx'
 import Counter02 from './propsComponents/statecount02.jsx'
 import Alert from './propsComponents/props06.jsx'
+import Exstate01 from './stateComponents/Exs01.jsx'
+import Exstate02 from './stateComponents/Exs02.jsx'
+import Exstate03 from './stateComponents/Exs03.jsx'
+import Exstate04 from './stateComponents/Exs04.jsx'
+import Exstate05 from './stateComponents/Exs05.jsx'
+import Exstate06 from './stateComponents/Exs06.jsx'
+import Exstate07 from './stateComponents/Exs07.jsx'
+import Exstate08 from './stateComponents/Exs08.jsx'
+import Exstate09 from './stateComponents/Exs09.jsx'
+import Exstate10 from './stateComponents/Exs10.jsx'
+import Exstate11 from './stateComponents/Exs11.jsx'
+import Exstate12 from './stateComponents/Exs12.jsx'
+import Exstate13 from './stateComponents/Exs13.jsx'
+import Exstate14 from './stateComponents/Exs14.jsx'
+import Exstate15 from './stateComponents/Exs15.jsx'
+import Exstate16 from './stateComponents/Exs16.jsx'
+import Exstate17 from './stateComponents/Exs17.jsx'
+import Exstate18 from './stateComponents/Exs18.jsx'
+
 //UserCard()함수 생성하기
 //UserCard()컴포넌트를 App()컴포넌트의 자식으로 사용할 예정
 //App()컴포넌트의 name,age매개변수를 => props명령어를 이용해
@@ -81,7 +100,7 @@ function App() {
     // React는 반드시 닫는 태그 존재해야 함 : <hr />
 
     <>
-    {/* 문제 : name : '홍길동' 정의 후 <h1>태그에 출력하기 */}
+      {/* 문제 : name : '홍길동' 정의 후 <h1>태그에 출력하기 */}
       {/* <div style={{backgroundColor:'lightsteelblue',
                   padding:'20px',
                   borderRadius:'15px'
@@ -136,10 +155,13 @@ function App() {
         {/* 문제3 */}
         {/* <Product name ='노트북' price={120000}/>
         <Product name ='마우스' price={15000}/> */}
-        <Alert type='error' msg='오류'/>
+
+        {/* 문제6 */}
+        {/* <Alert type='error' msg='오류'/>
         <Alert type='success' msg='성공'/>
         <Alert type='info' msg='알림'/>
-        <Alert type='warn' msg='경고'/>
+        <Alert type='warn' msg='경고'/> */}
+      <Exstate18/>
     </>
   )
 }
