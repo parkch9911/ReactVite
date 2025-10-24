@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(221, 221, 221);
+}
+.movieInputbox{
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.movieInputbox h3{
+    margin-bottom: 20px;
+}
+.movieInputbox .topbox{
+   justify-content: space-between;
+}
+.movieInputbox .topbox input{
+    margin-bottom: 5px;
+    width: 95px;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #dadada;
+}
+.movieInputbox .topbox input:focus{
+    outline: none;
+}
+.movieInputbox button{
+    display: inline-block;
+    padding: 5px 30px;
+    font-size: 13px;
+    margin: 10px 0;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+}
+.movieInputbox button:hover{
+    background-color: rgb(24, 98, 172);
+}
+.movieInputbox button:focus{
+    outline: none;
+}
+.moivereviewBox{
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+.moivereviewBox button{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+}
+.moivereviewBox button:hover{
+    outline: none;
+    border: none;
+    background-color: #dadada;
+}

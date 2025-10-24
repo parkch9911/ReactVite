@@ -49,6 +49,16 @@ import Exstate15 from './stateComponents/Exs15.jsx'
 import Exstate16 from './stateComponents/Exs16.jsx'
 import Exstate17 from './stateComponents/Exs17.jsx'
 import Exstate18 from './stateComponents/Exs18.jsx'
+import Blog from './stateComponents/Blog.jsx'
+import Review from './stateComponents/MovieReview.jsx'
+import Shopping from './stateComponents/ShoppingList.jsx'
+import CommentBoard from './stateComponents/CommentBoard.jsx'
+import ModalChange from './stateUI/UItest01.jsx'
+import LoginView from './stateUI/UItest02.jsx'
+import PromptChange from './stateUI/UItest03.jsx'
+import Parent from './stateUI/UItest04.jsx'
+import AuthApp from './stateUI/member/AuthApp.jsx'
+import MovieApp from './stateUI/movie/MovieApp.jsx'
 
 //UserCard()함수 생성하기
 //UserCard()컴포넌트를 App()컴포넌트의 자식으로 사용할 예정
@@ -161,7 +171,7 @@ function App() {
         <Alert type='success' msg='성공'/>
         <Alert type='info' msg='알림'/>
         <Alert type='warn' msg='경고'/> */}
-      <Exstate18/>
+      < MovieApp/>
     </>
   )
 }

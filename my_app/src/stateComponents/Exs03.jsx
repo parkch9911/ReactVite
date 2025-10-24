@@ -14,5 +14,5 @@ const change = ()=>{setToggle(toggle==='red'?'blue':'red')}
     )
 }
 // toggle의 초기값 'red'
-// 박스의 색은 toggle. 즉 style backgroundcolor:toggle
+// 박스의 색은 toggle. 즉 style backgroundcolor:toggleadd
 

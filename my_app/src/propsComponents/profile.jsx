@@ -11,6 +11,7 @@ function Parents03(){
 export default Parents03
 
 
+
 //자식 컴포넌트 생성
 //<div>
 //     <h2>이름: {}<h2/>
