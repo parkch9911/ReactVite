@@ -7,59 +7,20 @@ import './App.css'
 // React는 이미지를 하나하나 import해서 개별로 가져올 수 있다.
 // public 폴더의 이미지 파일은 import하지 않아도
 // 사용 가능하다.
-import image01 from '../public/images/image01.png'
-import Ex01 from './components/Ex01.jsx'
-import Ex02 from './components/Ex02.jsx'
-import Ex03 from './components/Ex03.jsx'
-import Ex04 from './components/Ex04.jsx'
-import Ex05 from './components/Ex05.jsx'
-import Ex06 from './components/Ex06.jsx'
-import Ex07 from './components/Ex07.jsx'
-import Ex08 from './components/Ex08.jsx'
-import Ex09 from './components/Ex09.jsx'
-import Ex10 from './components/Ex10.jsx'
-import Ex11 from './components/Ex11.jsx'
-import Ex12 from './components/Ex12.jsx'
-import Child from './propsComponents/child.jsx'
-import Parents from './propsComponents/parents.jsx'
-import Parents02 from './propsComponents/welcome.jsx'
-import Parents03 from './propsComponents/profile.jsx'
-import Parents04 from './propsComponents/propsEx.jsx'
-import Welcome from './propsComponents/props01.jsx'
-import UserCard02 from './propsComponents/props02.jsx'
-import Product from './propsComponents/props03.jsx'
-import Counter01 from './propsComponents/statecount.jsx'
-import Counter02 from './propsComponents/statecount02.jsx'
-import Alert from './propsComponents/props06.jsx'
-import Exstate01 from './stateComponents/Exs01.jsx'
-import Exstate02 from './stateComponents/Exs02.jsx'
-import Exstate03 from './stateComponents/Exs03.jsx'
-import Exstate04 from './stateComponents/Exs04.jsx'
-import Exstate05 from './stateComponents/Exs05.jsx'
-import Exstate06 from './stateComponents/Exs06.jsx'
-import Exstate07 from './stateComponents/Exs07.jsx'
-import Exstate08 from './stateComponents/Exs08.jsx'
-import Exstate09 from './stateComponents/Exs09.jsx'
-import Exstate10 from './stateComponents/Exs10.jsx'
-import Exstate11 from './stateComponents/Exs11.jsx'
-import Exstate12 from './stateComponents/Exs12.jsx'
-import Exstate13 from './stateComponents/Exs13.jsx'
-import Exstate14 from './stateComponents/Exs14.jsx'
-import Exstate15 from './stateComponents/Exs15.jsx'
-import Exstate16 from './stateComponents/Exs16.jsx'
-import Exstate17 from './stateComponents/Exs17.jsx'
-import Exstate18 from './stateComponents/Exs18.jsx'
-import Blog from './stateComponents/Blog.jsx'
-import Review from './stateComponents/MovieReview.jsx'
-import Shopping from './stateComponents/ShoppingList.jsx'
-import CommentBoard from './stateComponents/CommentBoard.jsx'
-import ModalChange from './stateUI/UItest01.jsx'
-import LoginView from './stateUI/UItest02.jsx'
-import PromptChange from './stateUI/UItest03.jsx'
-import Parent from './stateUI/UItest04.jsx'
-import AuthApp from './stateUI/member/AuthApp.jsx'
-import MovieApp from './stateUI/movie/MovieApp.jsx'
-
+// import Exstate18 from './stateComponents/Exs18.jsx'
+// import Blog from './stateComponents/Blog.jsx'
+// import Review from './stateComponents/MovieReview.jsx'
+// import Shopping from './stateComponents/ShoppingList.jsx'
+// import CommentBoard from './stateComponents/CommentBoard.jsx'
+// import ModalChange from './stateUI/UItest01.jsx'
+// import LoginView from './stateUI/UItest02.jsx'
+// import PromptChange from './stateUI/UItest03.jsx'
+// import Parent from './stateUI/UItest04.jsx'
+// import AuthApp from './stateUI/member/AuthApp.jsx'
+// import MovieApp from './stateUI/movie/MovieApp.jsx'
+import Zmovie from './stateUI/Zmovie/ZmovieApp'
+import ShopApp from './stateUI/shop/ShopApp'
+import FoodApp from './stateUI/food/FoodApp.jsx'
 //UserCard()함수 생성하기
 //UserCard()컴포넌트를 App()컴포넌트의 자식으로 사용할 예정
 //App()컴포넌트의 name,age매개변수를 => props명령어를 이용해
@@ -171,7 +132,7 @@ function App() {
         <Alert type='success' msg='성공'/>
         <Alert type='info' msg='알림'/>
         <Alert type='warn' msg='경고'/> */}
-      < MovieApp/>
+      <FoodApp/>
     </>
   )
 }

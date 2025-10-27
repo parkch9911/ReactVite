@@ -13,7 +13,6 @@ export default function MovieModal(props){
 // 그러면 map을 tree구조로 넘겨줘야하는가.
 
 
-
 // 끝날 시간 현재 문제점 : 부모 컴포넌트에서의 배열의 인덱스값?, 각 해당하는 배열의 키 값이 정의되지않음. 
     return(
         <>
