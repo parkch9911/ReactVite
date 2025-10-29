@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(155, 155, 155);
+}
+.contain-table{
+    width: 843px;
+    height: 525px;
+    margin: 0 auto;
+    background-color: #4d4d4d;
+    display: flex;
+    border-radius: 5px;
+    border: 3px soild #333;
+    overflow: hidden;
+    position: relative;
+}
+#root .contain-table .tabBox{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: rgb(119, 119, 119);
+    height: 100%;
+}
+#root .contain-table .tabBox h3{
+    margin: 20px 0;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+#root .contain-table .tabBox .tabBtn{
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 105px;
+    font-size: 15px;
+    padding: 15px;
+}
+#root .seecart{
+    position: relative;
+}
+#root .seecart .cartBtn{
+    position: absolute;
+    left: 50px;
+    top: 450px;
+}
+#root .contain-table .foodBox{
+    width: 643px;
+    overflow-y: scroll;
+    position: relative;
+}
+#root .contain-table .foodBox::-webkit-scrollbar{
+    width: 5px;
+    margin: 0;
+}
+#root .contain-table .foodBox::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 3px;
+  margin: 0;
+}
+#root .contain-table .foodBox .foodul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+#root .contain-table .foodBox .foodul .foodli{
+    width: 150px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin: 15px 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    border-radius: 10px;
+
+}
+#root .contain-table .foodBox .foodul .foodli:active{
+    background-color: rgb(88, 88, 88);
+}
+#root .contain-table .foodBox .foodul .foodli .foodimg{
+    width: 135px;
+    height: 135px;
+    border-radius: 10px;
+    display: block;
+    margin-left: 6px;
+}
+#root .contain-table .foodBox .foodul .foodli p{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+#root .contain-table .foodBox .foodul .foodli span{
+    display: block;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+#root .contain-table .foodBox .foodul .foodli strong{
+    font-size: 16px;
+}
+#root .contain-table .tabBox .cartBtn{
+    width: 100px;
+    position: absolute;
+    bottom: 40px;
+    left:  50px;
+}
+#root .contain-table .tabBox button{
+    transition: 0.5s;
+}
+#root .contain-table .tabBox button:hover{
+    outline: none;
+    border: 1px solid #9b9b9b;
+    background-color: #afafaf;
+    transform: translateY(1px);
+}
+#root .modal-contain{
+    position: absolute;
+    z-index: 900;
+    right: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+#root .modal{
+    width: 200px;
+    height: 525px;
+    background-color: #333;
+    position: relative;
+}
+#root .modal ul{
+    height: 350px;
+    overflow-y: scroll;
+}
+#root .modal ul li p{
+    margin: 5px;
+}
+#root .modal ul li span{
+    font-size: 14px;
+    margin: 0 5px;
+    color: #9b9b9b;
+}
+#root .modal ul li span strong{
+    color: white;
+}
+#root .modal ul li span em{
+    display: inline-block;
+}
+#root .modal ul::-webkit-scrollbar{
+    width: 5px;
+    margin: 0;
+}
+#root .modal ul::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 3px;
+  margin: 0;
+} 
+#root .modal > p{
+    background-color: aliceblue;
+    padding: 10px;
+}
+#root .modal .modalqaunBtn{
+    width: 190px;
+    display: flex;
+    justify-content: space-around;
+}
+#root .modal .modalqaunBtn button{
+    width: 50px;
+    font-size: 14px;
+    padding: 5px 3px;
+    border: none;
+    margin: 10px 0;
+    
+}
+#root .modal .modalqaunBtn button:focus{
+    outline: none;
+}
+#root .modal .modalqaunBtn button:hover{
+    border: none;
+    background-color: #b9b9b9;
+}
+#root .modal .modalqaunBtn .delcart{
+    color: white;
+    background-color: crimson;
+}
+#root .modal .modalqaunBtn .delcart:hover{
+    background-color: rgb(161, 16, 45);
+}
+#root .modal .modalBtnBox{
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    bottom: 20px;
+}
+#root .modal .modalBtnBox button{
+    width: 80px;
+    padding: 5px;
+}
+#root .modal ul{
+    color: white;
+}
+#root .commitBox{
+    background-color: rgb(49, 49, 49);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 200px 0;
+    font-size: 14px;
+}
+#root .commitBox button{
+    margin-top: 100px;
+    padding: 10px 20px;
+}
+#root .commitBox button:hover{
+    outline: none;
+    border: 1px solid #9b9b9b;
+    background-color: #afafaf;
+    transform: translateY(1px);
+}

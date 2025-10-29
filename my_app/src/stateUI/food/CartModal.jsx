@@ -1,10 +1,5 @@
 export default function CartModal(props){
-    for(let i = 0; i<props.cart.length; i++){
-          console.log(`${props.cart[i].name}`)
-          console.log(`${props.cart[i].price}`)
-          console.log(`${props.cart[i].quantity}`)
-    }
-  
+     
     return(
         <>
             <div style={{position:'fixed',
@@ -26,9 +21,9 @@ export default function CartModal(props){
                             {props.cart.map((item,index)=>(
                                 <li key={index}>
                                     <span>{item.name}</span>
-                                    <button type="button" onClick={props.minus}>-</button>
+                                    <button type="button" onClick={minus}>-</button>
                                     <span>{item.quantity}</span>
-                                    <button type="button" onClick={props.plus}>+</button>
+                                    <button type="button" onClick={plus}>+</button>
                                     {/* <span>{`Each Price : ${item.price*item.quantity}원`}</span> */}
                                 </li>
                             ))}

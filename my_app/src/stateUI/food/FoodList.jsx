@@ -1,7 +1,6 @@
 
 
 export default function FoodList(props){
-console.log(props.foods)
     return(
         <>
             <ul>

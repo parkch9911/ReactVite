@@ -24,7 +24,6 @@ export default function FoodApp(){
     const addCart = (food)=>{
         let cartCopy = [...cart]
         let findCheck = false;
-        console.log(`여기: ${food.id}`)
         for(let i=0; i<cart.length; i++){
             if(food.id === cartCopy[i].id){
                 cartCopy[i].quantity += 1;
@@ -43,18 +42,17 @@ export default function FoodApp(){
         setCart(cartCopy);
     }
 
-    const minus = ()=>{
-        if(cartCopy.quantity > 0){
-            cartCopy[i].quantity+= -1;
+        const minus = ()=>{
+            if(props.cart.quantity > 0){
+               props.cart.quantity -1;
+            }
         }
-    }
-
-    const plus = ()=>{
-        if(cartCopy.quantity < 11 ){
-            cartCopy[i].quantity+= 1;
+    
+        const plus = ()=>{
+            if(props.cart.quantity < 11 ){
+               props.cart.quantity + 1;
+            }
         }
-    }
-
 
     return(
         <>
