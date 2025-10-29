@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Changeimg02(){
+export default function Changeimg03(){
     
     const [index,setIndex]=useState(0)
     const imgs = ['/images/coffee-gray.jpg',

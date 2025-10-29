@@ -48,10 +48,11 @@ export default function TableApp(){
 
     // 카테고리 구분용 1
     const [tab,setTab]= useState(1)
+    const [best,setBest]= useState(false)
     // 필터로 걸러서 map돌려야함
     // foods매개변수 
     const changeTab = menus.filter((foods)=>foods.cate === tab)
-    // const best = menus.filter((foods)=>foods.best === 'Y')
+    const bestTab = menus.filter((foods)=>foods.best === 'Y')
 
     // 빈배열 담기용
     const [cart,setCart]=useState([])
@@ -149,6 +150,9 @@ export default function TableApp(){
             plus={plus}
             minus={minus}
             dele={dele}
+            best={best}
+            setBest={setBest}
+            bestTab={bestTab}
             />
             {/* 모달 true면 이거 보이게 하기 */}
         </>

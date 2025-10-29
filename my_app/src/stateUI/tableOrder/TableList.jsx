@@ -6,14 +6,15 @@ export default function TableList(props){
             <div className="contain-table" >
                 <div className="tabBox">
                     <h3>🍴테이블 No.13</h3>
-                    <button className="tabBtn" onClick={()=>props.setTab(1)}>식사 메뉴</button>
-                    <button className="tabBtn" onClick={()=>props.setTab(2)}>안주 메뉴</button>
-                    <button className="tabBtn" onClick={()=>props.setTab(3)}>주류 메뉴</button>
+                    <button className="tabBtn" onClick={()=>props.setBest(true)}>인기 메뉴</button>
+                    <button className="tabBtn" onClick={()=>{props.setTab(1);props.setBest(false);}}>식사 메뉴</button>
+                    <button className="tabBtn" onClick={()=>{props.setTab(2);props.setBest(false);}}>안주 메뉴</button>
+                    <button className="tabBtn" onClick={()=>{props.setTab(3);props.setBest(false);}}>주류 메뉴</button>
                     <button className="cartBtn"onClick={()=>props.setModal(true)} >주문내역</button>
                 </div>
                 <div className="foodBox">
                     <ul className="foodul">
-                        {props.changeTab.map((food)=>(
+                        {(props.best? props.bestTab:props.changeTab).map((food)=>(
                         <li  key={food.id} className="foodli" 
                         onClick={()=>props.addcart(food)}>
                             <img className="foodimg" src={'/tableimg/'+food.img+'.jpg'}/>
