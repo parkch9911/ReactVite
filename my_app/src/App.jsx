@@ -22,7 +22,7 @@ import './App.css'
 import FoodApp from './stateUI/food/FoodApp.jsx'
 import TableApp from './stateUI/tableOrder/TableApp.jsx'
 import Eff07 from './Effect/eff07.jsx'
-import Changeimg04 from './stateUI/test/changeimg04.jsx'
+import Ex11 from './Effect/Ex11.jsx'
 //UserCard()함수 생성하기
 //UserCard()컴포넌트를 App()컴포넌트의 자식으로 사용할 예정
 //App()컴포넌트의 name,age매개변수를 => props명령어를 이용해
@@ -134,7 +134,7 @@ function App() {
         <Alert type='success' msg='성공'/>
         <Alert type='info' msg='알림'/>
         <Alert type='warn' msg='경고'/> */}
-      <TableApp/>
+        <Ex11/>
     </>
   )
 }
