@@ -12,8 +12,8 @@ export default function Ex11(){
         if(inputAge>0){
         console.log('나이가 변경되었습니다')}
     },[inputAge])
-
-   return(
+    
+    return(
     <>
         <input type="text"
          placeholder="이름을 입력해주세요"
