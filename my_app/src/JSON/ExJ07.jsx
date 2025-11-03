@@ -1,26 +1,9 @@
 import { useEffect,useState } from "react";
+import { Link } from "react-router-dom";
+import ExJ07detail from "./ExJ07detail";
 
-export default function ExJ07(){
-const[data,setData] = useState([])
-useEffect(()=>{
-fetch('https://fakestoreapi.com/products')
-.then((res)=>{
-    if(!res.ok){
-        throw new Error(res.status)
-    }
-    return res.json()
-})
-.then((getdata)=>{
-    setData(getdata)
-    console.log(getdata)
-})
-.catch((err)=>{
-    setErrMsg(err.message)
-})
-.finally(()=>{
-    console.log('요청완료')
-})
-},[])
+export default function ExJ07({data}){
+// const[data,setData] = useState([])
 
 // 기본값 담을 상태변수 category
 const [list,setList]=useState(`men's clothing`)
@@ -32,7 +15,17 @@ const changeTab = data.filter((val)=>val.category === list)
 console.log(changeTab) // 잘 걸러짐
 // 평점 필터
 const rateTab = data.filter((val)=>val.rating.rate > 0)
-console.log(rateTab) // 빈배열로 반환 이거 배웟는데 
+// rateTab 이용해서 sort로 내림차순해야함
+//sort((a,b)=> a-b)   --- 이건 오른차순 정렬
+//sort((a,b)=> b-a)   --- 이건 내림차순 정렬
+const rateCopy = [...data]
+const rateSort = rateCopy.sort((a,b)=> b.rating.rate - a.rating.rate)
+
+// 
+console.log("여기까지")
+console.log(rateTab)
+console.log(rateSort) // sort 값 제대로출력됨.
+
 
     return(
         <>
@@ -40,7 +33,8 @@ console.log(rateTab) // 빈배열로 반환 이거 배웟는데
             style={{backgroundColor:'white',
                 width:'1000px',
                 height:'1200px',
-                overflow:'scroll'
+                overflow:'scroll',
+                borderLeft:'20px solid gray'
             }}>
                 <div className="btnwrap"
                 style={{backgroundColor:"gray",
@@ -81,7 +75,9 @@ console.log(rateTab) // 빈배열로 반환 이거 배웟는데
                         listStyle:'none'
     
                     }}>
-                    {(listrate? rateTab:changeTab).map((item)=>(
+                 
+                        {/* 평점순에 내림차순만 넣으면 해결  */}
+                    {(listrate? rateSort:changeTab).map((item)=>(
                         <li key={item.id} style={{width:'150px'}}>
                             <img style={{width:'150px',
                             height:'200px',
@@ -91,13 +87,14 @@ console.log(rateTab) // 빈배열로 반환 이거 배웟는데
                             <p style={{marginTop:'10px',
                                 fontWeight:'700'
                             }}>{item.price} $</p>
+                            <Link to = {`/detail/${item.id}`}>
+                            상세보기 
+                            </Link>
                         </li>
                     ))}
-    
                     </ul>
                 </div>
-            </div>
-            
+            </div>    
         </>
     )
 }

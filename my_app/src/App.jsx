@@ -7,6 +7,8 @@ import './App.css'
 // React는 이미지를 하나하나 import해서 개별로 가져올 수 있다.
 // public 폴더의 이미지 파일은 import하지 않아도
 // 사용 가능하다.
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 // import Exstate18 from './stateComponents/Exs18.jsx'
 // import Blog from './stateComponents/Blog.jsx'
 // import Review from './stateComponents/MovieReview.jsx'
@@ -18,12 +20,23 @@ import './App.css'
 // import Parent from './stateUI/UItest04.jsx'
 // import AuthApp from './stateUI/member/AuthApp.jsx'
 // import MovieApp from './stateUI/movie/MovieApp.jsx'
-
 import FoodApp from './stateUI/food/FoodApp.jsx'
 import TableApp from './stateUI/tableOrder/TableApp.jsx'
 import Eff07 from './Effect/eff07.jsx'
 import ExJ05 from './JSON/ExJ05.jsx'
 import ExJ07 from './JSON/ExJ07.jsx'
+import ExJ07detail from './JSON/ExJ07detail.jsx'
+import useProduct from './JSON/data.jsx' 
+import Home from './pages/home.jsx'
+import About from './pages/about.jsx'
+import ProdApp from './pages/prodapp.jsx'
+import ProdDetail from './pages/proddetail.jsx'
+import ExJ07datail from './JSON/ExJ07detail.jsx'
+import useRecipes from './pages/Recipes/RecipesData.jsx'
+import RecipesList from './pages/Recipes/RecipesList.jsx'
+import RecipesDetail from './pages/Recipes/RecipesDetail.jsx'
+
+
 //UserCard()함수 생성하기
 //UserCard()컴포넌트를 App()컴포넌트의 자식으로 사용할 예정
 //App()컴포넌트의 name,age매개변수를 => props명령어를 이용해
@@ -54,19 +67,24 @@ function App() {
 // 실행할 HTML 문서를 작성한다.
 // true와 false는 논리값이다. 문자가 아님.
 // true === 1, false === 0
-  const name = '홍길동';
-  const isLoggin = true;
-  const fruits = ['사과','오렌지','바나나'];
-  const user = {name:'김철수', age:25, email:'kim@naver.com'}
-  const btnClick = ()=>{
-              console.log('버튼클릭')
-              }
-  const products = [{id:1, name:'노트북',price:1200000},
-                    {id:2, name:'마우스',price:30000},
-                    {id:3, name:'키보드',price:80000}
-  ]
+  // const name = '홍길동';
+  // const isLoggin = true;
+  // const fruits = ['사과','오렌지','바나나'];
+  // const user = {name:'김철수', age:25, email:'kim@naver.com'}
+  // const btnClick = ()=>{
+  //             console.log('버튼클릭')
+  //             }
+  // const products = [{id:1, name:'노트북',price:1200000},
+  //                   {id:2, name:'마우스',price:30000},
+  //                   {id:3, name:'키보드',price:80000}
+  // ]
   // 위에서 name => key
   //       김철수 => value
+
+
+  //내가 만든 커스텀 훅 호출
+  const data= useRecipes();
+
   return (
     // <></>는 프래그먼트로 React는 HTML 작성 시
     // 반드시 부모태그가 하나만 존재해야 하므로
@@ -135,7 +153,12 @@ function App() {
         <Alert type='success' msg='성공'/>
         <Alert type='info' msg='알림'/>
         <Alert type='warn' msg='경고'/> */}
-        <ExJ07/>
+        {/* <ExJ07/> */}
+        {/* 커스텀훅이든 이미 존재하는 훅이든 JSX안으로 가져올 수 없다. */}
+          <Routes>
+            <Route path='/' element={<RecipesList data={data}/>}/>
+            <Route path='/detail/:id' element={<RecipesDetail data={data}/>}/>
+          </Routes>
     </>
   )
 }

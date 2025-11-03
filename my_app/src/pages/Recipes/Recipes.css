@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+.res-all{
+    width: 1200px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+}
+.res-all .res-btn-wrap{
+    width: 1200px;
+    padding: 20px 0;
+}
+.res-all .res-btn-wrap button{
+    border-radius: 0;
+}
+.res-all .res-list-wrap ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 25px;
+}
+.res-all .res-list-wrap ul li{
+    width: 250px;
+}
+.res-all .res-list-wrap ul li img{
+    width: 250px;
+    border-radius: 25%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.res-all .res-list-wrap ul li a{
+    display: block;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+.res-all .res-list-wrap ul li a:hover{
+    color: dodgerblue;
+    font-weight: 600;
+}
+.res-detail-wrap{
+    width: 1000px;
+    height: 1100px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 30px;
+    padding: 40px;
+}
+.res-detail-wrap img{
+    width: 500px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+.res-detail-wrap h1{
+    margin: 10px 0;
+}
+.res-detail-wrap p{
+    font-weight: 600;
+    font-size: 20px;
+    margin: 5px 0;
+}
+.res-detail-wrap span{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 5px 0;
+}
+.res-detail-wrap h3{
+    font-size: 30px;
+    margin: 15px;
+}
+.res-detail-wrap a{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 40px;
+    background-color: dodgerblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+.likes{
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
