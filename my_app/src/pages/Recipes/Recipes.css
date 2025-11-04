@@ -43,7 +43,6 @@ body{
 }
 .res-all .res-list-wrap ul li a:hover{
     color: dodgerblue;
-    font-weight: 600;
 }
 .res-detail-wrap{
     width: 1000px;

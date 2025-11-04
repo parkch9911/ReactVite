@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section{
+    width: 1000px;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+.section h2{
+    margin: 10px 0;
+}
+.banner{
+    width: 1000px;
+}
+.section .home-food ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.section .home-food ul li{
+    width: 300px;
+}
+.section .home-food .home-img{
+    width: 250px;
+    margin-top: 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.section .home-food p{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+/*  */
+.section .home-food2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.section .home-food2 ul li{
+    width: 300px;
+}
+.section .home-food2 .home-img{
+    width: 250px;
+    margin-top: 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.section .home-food .home-img:hover{
+    transform: translateY(3px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.section .home-food2 .home-img:hover{
+    transform: translateY(3px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.section .home-food2 p{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.section .home-food2 h2{
+    margin: 50px 0;
+    margin-top: 80px;
+}
+.section .home-food2{
+    margin-bottom: 150px;
+}

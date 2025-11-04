@@ -69,17 +69,47 @@ const btnHandler = (num)=>{
     }
 }
 
-const [likebtn,setLikebtn] = useState(0);
-let like = (index)=>{
-    let dataCopy = [...data]
+//좋아요 출력
+// like = {1:0, 2:0, 3:0 ...}
+// id 음식명 좋아요
+// 1   된찌    0
+// 2   김찌    0 ...
+// like 상태변수 
+// JSON 자체가 오브젝트 이기 때문에 아래와 같이 초기화 할 수 없다.
+// const [likes, setLikes]=useState(0)
+// 이유는 하나의 항목만 좋아요가 0이 되기 때문에
+//오브젝트에 0을 초기화하는 초기값 변수
+const defaultLikes = {} // 빈 배열 또는 빈 오브젝트 undefinded 될 가능성 높음
+if(data.length > 0 ){
     for(let i=0; i<data.length; i++){
-        if(index[i]=== dataCopy[i]){
-            dataCopy.push({likes:0})
-            dataCopy.likes+=1;
-        }
+        const recipe = data[i]
+        //defaultLikes[1]=0
+        //{id:1,좋아요:0}
+        defaultLikes[recipe.id] = 0 // 각 레시피 id별로 초기값 0 세팅
     }
 }
-console.log(dataCopy)
+
+const [likes, setLikes]=useState(defaultLikes)
+
+//좋아요 버튼 클릭 시 좋아요 1씩 증가하는 핸들러 작성
+const handleLike =(id)=>{
+    const likesCopy = {...likes}
+    //현재 undefined 인 경우 -> undefinded + 1 => NaN 나옴
+    likesCopy[id] = (likesCopy[id] !== undefined ? likesCopy[id]:0) + 1
+    setLikes(likesCopy)
+}
+
+
+// const [likebtn,setLikebtn] = useState(0);
+// let like = (index)=>{
+//     let dataCopy = [...data]
+//     for(let i=0; i<data.length; i++){
+//         if(index[i]=== dataCopy[i]){
+//             dataCopy.push({likes:0})
+//             dataCopy.likes+=1;
+//         }
+//     }
+// }
 
 //레이트 토글을 만들어서 일단 텍스트자체는 변화줄수잇음 온클릭시 부정값 나오게해놔서 true값 그대로 가지고  토글 boolean만 변함
     return(
@@ -108,14 +138,14 @@ console.log(dataCopy)
                 </div>
                 <div className="res-list-wrap">
                     <ul>
-                        {(basicList? basicTab: cuisine? cuisineTab:rateSortDown).map((item)=>(
+                        {(basicList? basicTab: cuisine? cuisineTab:rateSortDown).map((item)=>( 
                         <li key={item.id}>
                             <img src={item.image}/>
                             <Link to = {`/detail/${item.id}`}>{item.name}</Link>
                             <span>cuisine : {item.cuisine}</span>
                             <p>rating : {item.rating}</p>
                             <p>Click name to Detail!</p>
-                            <button className="likes" onClick={like}>❤️ 좋아요 {item.likes}</button>
+                            <button className="likes" onClick={()=>handleLike(item.id)}>❤️ 좋아요 {likes[item.id]}</button>
                         </li>
                         ))}
                     </ul>
