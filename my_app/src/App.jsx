@@ -37,6 +37,7 @@ import RecipesList from './pages/Recipes/RecipesList.jsx'
 import RecipesDetail from './pages/Recipes/RecipesDetail.jsx'
 
 
+
 //UserCard()함수 생성하기
 //UserCard()컴포넌트를 App()컴포넌트의 자식으로 사용할 예정
 //App()컴포넌트의 name,age매개변수를 => props명령어를 이용해
@@ -155,10 +156,11 @@ function App() {
         <Alert type='warn' msg='경고'/> */}
         {/* <ExJ07/> */}
         {/* 커스텀훅이든 이미 존재하는 훅이든 JSX안으로 가져올 수 없다. */}
-          <Routes>
+          {/* <Routes>
             <Route path='/' element={<RecipesList data={data}/>}/>
             <Route path='/detail/:id' element={<RecipesDetail data={data}/>}/>
-          </Routes>
+          </Routes> */}
+          <TableApp/>
     </>
   )
 }

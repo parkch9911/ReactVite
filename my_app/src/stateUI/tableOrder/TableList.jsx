@@ -36,6 +36,7 @@ export default function TableList(props){
                     minus={props.minus}
                     dele={props.dele}
                     setCart={props.setCart}
+                    total={props.total}
                     />}
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TableList from "../tableOrder/TableList";
 import './tableorder.css'
 
@@ -97,7 +97,6 @@ export default function TableApp(){
 // 수량 증가버튼
     const plus = (index)=>{
         let cartCopy = [...cart]
-        // for(let i=0; i<cartCopy.length; i++){
         if(cartCopy[index].quantity < 11){
             cartCopy[index].quantity += 1;
         }
@@ -107,7 +106,6 @@ export default function TableApp(){
 // 수량 감소버튼
     const minus = (index)=>{
         let cartCopy = [...cart]
-        // for(let i=0; i<cartCopy.length; i++){ 
         if(cartCopy[index].quantity > 1){
             cartCopy[index].quantity += -1;
         }
@@ -121,18 +119,19 @@ export default function TableApp(){
         setCart(cartCopy);
     }
 
-    // // 총액 기본값 0
-    // const [total,setTotal]=useState(0)
-    // // 총액 구하는 함수
-    // const cartTotal =(index)=>{
-    //     let cartTotal = [...cart]
-    //     for(let i=0; i<cartCopy.length; i++){
-    //         total += cartCopy[index].price*cartCopy[index].quantity
-    //     }
-    //     setTotal(total)
-    // }
-    // console.log(cartTotal)
+//===================================================
 
+    const [total,setTotal]=useState(0)
+    useEffect(()=>{
+        let res = 0;
+        for(let i=0; i<cart.length; i++){
+            res += cart[i].quantity*cart[i].price
+        }
+        setTotal(res)
+    },[cart])
+    console.log(total)
+
+    
     return(
         <>
             {/* 원본배열 있어야 상품출력, 장바구니 담기버튼, setTab, 필터함수 , 인기메뉴 필터도*/}
@@ -153,6 +152,7 @@ export default function TableApp(){
             best={best}
             setBest={setBest}
             bestTab={bestTab}
+            total={total}
             />
             {/* 모달 true면 이거 보이게 하기 */}
         </>

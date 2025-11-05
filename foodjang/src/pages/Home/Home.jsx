@@ -36,6 +36,7 @@ console.log(homefilter2)
                             </li>
                         ))}
                     </ul>
+                    <hr/>
                 </div>
                  <div className="home-food2">
                     <h2>리뷰 많은 레시피</h2>
@@ -47,6 +48,7 @@ console.log(homefilter2)
                             </li>
                         ))}
                     </ul>
+                    <hr/>
                 </div>
 
             </div>

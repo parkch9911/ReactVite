@@ -20,7 +20,7 @@ export default function TableModal(props){
                             </li>
                         ))}
                     </ul>
-
+                        <p>총액 : {(props.total).toLocaleString()}원</p>
                     <div className="modalBtnBox">
                         <button className="close" type="button" onClick={()=>props.setModal(false)}>닫기</button>
                         <button className="commit" type="button" onClick={()=>props.setCommit(true)}>주문하기</button>
