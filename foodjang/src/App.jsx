@@ -15,6 +15,7 @@ import MealsFast from './pages/Meals/MealsFast.jsx'
 import MealsNew from './pages/Meals/MealsNew.jsx'
 import MealsRate from './pages/Meals/MealsRate.jsx'
 import Home from './pages/Home/Home'
+import LoginForm from './common/LoginForm/LoginForm.jsx'
 
 
 function App() {
@@ -32,6 +33,7 @@ const data = useMeals();
           <Route path='/best' element={<MealsBest data={data} />}/>
           <Route path='/fast' element={<MealsFast data={data} />}/>
           <Route path='/rate' element={<MealsRate data={data} />}/>
+          <Route path='/login' element={<LoginForm/>}/>
           <Route path='/detail/:id' element={<MealsDetail data={data} />}/>
         </Routes>
       <Footer/>

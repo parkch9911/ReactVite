@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import '../common.css'
 
@@ -12,7 +12,7 @@ export default function Header(){
                     <Link>+BOOKMARK</Link>
                 </div>
                 <div className="Header-top-right">
-                   <Link>로그인</Link>
+                   <Link to='/login'>로그인</Link>
                    <Link>회원가입</Link>
                    <Link>고객센터</Link>
                    <Link>장바구니</Link>

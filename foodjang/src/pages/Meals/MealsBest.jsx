@@ -13,7 +13,7 @@ export default function MealsBest({data}){
             <ul>
                 {bestfilter.map((item)=>(
                 <li key={item.id}>
-                    <Link to={`/detail/${item.id}`}><img alt={item.name} src={item.image}/></Link>
+                    <Link to={`/detail/${item.id}`} onClick={()=>window.scrollTo(0,0)}><img alt={item.name} src={item.image}/></Link>
                     <p>❤ {item.name}</p>
                 </li>
                 ))}

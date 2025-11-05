@@ -31,7 +31,7 @@ console.log(homefilter2)
                     <ul>
                         {homefilter1.map((item)=>(
                             <li key={item.id}>
-                               <Link to={`/detail/${item.id}`}> <img alt={item.name} src={item.image} className="home-img"/></Link>
+                               <Link to={`/detail/${item.id}`} onClick={()=>window.scrollTo(0,0)}> <img alt={item.name} src={item.image} className="home-img"/></Link>
                                 <p>{item.name}</p>
                             </li>
                         ))}
@@ -42,7 +42,7 @@ console.log(homefilter2)
                     <ul>
                         {homefilter2.map((item)=>(
                             <li key={item.id}>
-                                <Link to={`/detail/${item.id}`}> <img alt={item.name} src={item.image} className="home-img"/></Link>
+                                <Link to={`/detail/${item.id}`} onClick={()=>window.scrollTo(0,0)}> <img alt={item.name} src={item.image} className="home-img"/></Link>
                                 <p>{item.name}</p>
                             </li>
                         ))}
