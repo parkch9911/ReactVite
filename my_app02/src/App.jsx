@@ -14,6 +14,10 @@ import LoginForm02 from './Context02/component02/LoginForm02'
 import Profile02 from './Context02/component02/Profile02'
 import Header02 from './Context02/component02/Header02'
 import LoginProvider from './Context02/AuthContext'
+import WishlistProvider from './wishlist/WishListContext'
+import ProductList from './wishlist/ProductList'
+import WishListPage from './wishlist/WishlistPage'
+import WishListHeader from './wishlist/WishlistHeader'
 
 
 
@@ -21,14 +25,13 @@ function App() {
 
   return (
     <>
-      <LoginProvider>
-        <Header02/>
+      <WishlistProvider>
+        <WishListHeader/>
         <Routes>
-          <Route path='/' element={<Home02/>}/>
-          <Route path='/profile' element={<Profile02/>}/>
-          <Route path='/login' element={<LoginForm02/>}/>
+          <Route path='/' element={<ProductList/>}/>
+          <Route path='/wishlist' element={<WishListPage/>}/>
         </Routes>
-      </LoginProvider>
+      </WishlistProvider>
     </>
   )
 }

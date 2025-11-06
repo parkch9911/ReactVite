@@ -1,0 +1,56 @@
+.delwish{
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    background-color: crimson;
+    margin-left: 15px;
+}
+.delwish:hover{
+    background-color: rgb(133, 22, 44);
+}
+.wishdetail{
+    background-color: rgb(187, 187, 187);
+    padding: 10px 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.wishdetail:hover{
+    color: white;
+    background-color: gray;
+}
+.ifno{
+    height: 700px;
+    padding-top: 150px;
+}
+.nowish{
+    font-size: 18px;
+    font-weight: 700;
+}
+.backtorec{
+    background-color: white;
+    margin-top: 300px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+}
+.backto{
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+}
+.backtorec:hover,.backto:hover{
+    background-color: rgb(133, 22, 44);
+    color: white;
+}

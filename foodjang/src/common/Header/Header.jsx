@@ -14,7 +14,7 @@ export default function Header(){
                 <div className="Header-top-right">
                    <Link to='/login'>로그인</Link>
                    <Link>회원가입</Link>
-                   <Link>고객센터</Link>
+                   <Link to='/wish'>찜 목록</Link>
                    <Link>장바구니</Link>
                 </div>
             </div>

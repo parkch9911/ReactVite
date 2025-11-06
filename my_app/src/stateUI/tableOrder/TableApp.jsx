@@ -131,7 +131,6 @@ export default function TableApp(){
     },[cart])
     console.log(total)
 
-    
     return(
         <>
             {/* 원본배열 있어야 상품출력, 장바구니 담기버튼, setTab, 필터함수 , 인기메뉴 필터도*/}

@@ -112,3 +112,8 @@ ul li p{
     color: white;
     background-color: rgb(104, 18, 35);
 }
+.wishbtn{
+    margin-bottom: 15px;
+    width: 200px;
+    background-color: rgb(245, 139, 160);
+}

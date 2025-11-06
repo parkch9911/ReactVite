@@ -16,27 +16,30 @@ import MealsNew from './pages/Meals/MealsNew.jsx'
 import MealsRate from './pages/Meals/MealsRate.jsx'
 import Home from './pages/Home/Home'
 import LoginForm from './common/LoginForm/LoginForm.jsx'
-
-
+import Wish from './pages/Wish/Wish.jsx'
+import FoodjangProvider from './foodjangContext/FoodjangContext.jsx'
 function App() {
   //호출 커스텀 훅
 const data = useMeals();
   return (
     <>
     <BrowserRouter>
-      <Header/>
-        <Routes>
-          {/* 메인 홈 페이지나, 상품목록이나, 디테일이나 전부 json데이터필요해서 다 보내줌*/}
-          <Route path='/' element={<Home data={data} />}/>
-          <Route path='/all' element={<MealsAll data={data} />}/>
-          <Route path='/new' element={<MealsNew data={data} />}/>
-          <Route path='/best' element={<MealsBest data={data} />}/>
-          <Route path='/fast' element={<MealsFast data={data} />}/>
-          <Route path='/rate' element={<MealsRate data={data} />}/>
-          <Route path='/login' element={<LoginForm/>}/>
-          <Route path='/detail/:id' element={<MealsDetail data={data} />}/>
-        </Routes>
-      <Footer/>
+      <FoodjangProvider>
+        <Header/>
+          <Routes>
+            <Route path='/' element={<Home data={data} />}/>
+            <Route path='/all' element={<MealsAll data={data} />}/>
+            <Route path='/new' element={<MealsNew data={data} />}/>
+            <Route path='/best' element={<MealsBest data={data} />}/>
+            <Route path='/fast' element={<MealsFast data={data} />}/>
+            <Route path='/rate' element={<MealsRate data={data} />}/>
+            {/* 찜 목록 */}
+            <Route path='/wish' element={<Wish data={data} />}/>  
+            <Route path='/login' element={<LoginForm/>}/>
+            <Route path='/detail/:id' element={<MealsDetail data={data} />}/>
+          </Routes>
+        <Footer/>
+      </FoodjangProvider>
     </BrowserRouter>
     </>
   )

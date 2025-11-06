@@ -15,7 +15,7 @@ export default function LoginForm(){
                         <button className="logbtn" type="submit">로그인</button>
                         <div className="check">
                             <input type="checkbox" id="idcheck"/>
-                            <label for='idcheck'>아이디 저장하기</label>
+                            <label htmlFor ='idcheck'>아이디 저장하기</label>
                         </div>
                         <button className="logbtn2" type="button">카카오톡으로 회원가입/로그인</button>
                     </div>
