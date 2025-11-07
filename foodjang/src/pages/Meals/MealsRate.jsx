@@ -24,7 +24,7 @@ export default function MealsRate({data}){
                     <Link to={`/detail/${item.id}`} onClick={()=>window.scrollTo(0,0)}><img alt={item.name} src={item.image}/></Link>
                     <p>{item.name}</p>
                     <p>⭐ {item.rating}</p>
-                    <button className="wishbtn" onClick={()=>{isinwish(item.id)?removewish(item.id):addwish(item)}}>{isinwish(item.id)?'♥':'♡'}</button>
+                    <button className="wishbtn" onClick={()=>{isinwish(item.id)?removewish(item.id):addwish(item)}}>{isinwish(item.id)?'❤️':'🤍'}</button>
                 </li>
                 ))}
             </ul>

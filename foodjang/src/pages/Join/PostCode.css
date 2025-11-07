@@ -1,0 +1,56 @@
+/* 🩶 오버레이 (화면 전체 덮기) */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 반투명 검정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 모달 박스 */
+.modalBox{
+  background: white;
+  width: 400px;
+  height: 470px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.outbtn{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    width: 120px;
+    background-color: #d33;
+    color: white;
+    font-weight: bold; 
+}
+.outbtn:hover{
+    background-color: rgb(150, 45, 45);
+}
+#userAddSearch{
+    background-color: rgb(255, 255, 255);
+    color: crimson;
+    border: 1px solid crimson;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+#userAddSearch:hover{
+    background-color: crimson;
+    color: white;
+}
+.read::placeholder{
+    text-align: center;
+    color: black;
+}

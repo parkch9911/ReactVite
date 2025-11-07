@@ -17,14 +17,11 @@ const homefilter1 = dataCopy.filter((val)=>val.rating > 4.8)
 const homefilter2 = dataCopy.filter((val)=>val.reviewCount > 90)
 
 
-console.log(homefilter1)
-console.log(homefilter2)
-
-
-
     return(
         <>
-            <img className="banner" src="../public/img/foodjangbanner.JPG"/>
+            <div className="bannerZone">
+                <img className="banner" src="../public/img/foodjangbanner.JPG"/>
+            </div>
             <div className="section">
                 <div className="home-food">
                 <h2>그린의 추천 레시피</h2>

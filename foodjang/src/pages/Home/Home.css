@@ -6,13 +6,15 @@
 .section{
     width: 1000px;
     margin-top: 40px;
-    padding-top: 10px;
+    padding-top: 450px;
 }
 .section h2{
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
-.banner{
-    width: 1000px;
+.bannerZone{
+    position: absolute;
+    left: 0;
+    top: 240px;
 }
 .section .home-food ul{
     display: flex;

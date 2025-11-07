@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .delwish{
     margin-bottom: 20px;
     color: white;
@@ -46,11 +49,72 @@
     padding: 10px;
     border-radius: 10px;
     color: white;
-    background-color: crimson;
+    background-color: rgb(255, 187, 0);
     font-size: 20px;
     font-weight: bold;
 }
 .backtorec:hover,.backto:hover{
-    background-color: rgb(133, 22, 44);
+        background-color: rgb(184, 139, 15);
+
     color: white;
+}
+.delallwish{
+    background-color: crimson;
+    padding: 13px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.delallwish:hover{
+    background-color: rgb(141, 27, 49);
+}
+.deloverlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.realDel{
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-150%);
+    border-radius: 20px;
+    padding: 20px;
+}
+.realDel p{
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-weight: 700;
+}
+.realDel .delbtnbox{
+    display: flex;
+    justify-content: space-around;
+}
+.realDel button{
+    width: 150px;
+    font-weight: bold;
+}
+.delbtnbox .yesbtn{
+    background-color: white;
+    border: 1px solid crimson;
+    color: crimson
+}
+.delbtnbox .yesbtn:hover{
+    background-color: rgb(204, 204, 204);
+}
+.delbtnbox .nobtn{
+    background-color: crimson;
+    color: white;
+}
+.delbtnbox .nobtn:hover{
+    background-color: rgb(122, 28, 47);
 }

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function Footer(){
     return(
+        <>
+        <div className="footer-line"></div>
         <div className="Footer-wrap">
             <div className="Footer-top">
                 <div className="Footer-top-left">
@@ -46,5 +48,6 @@ export default function Footer(){
                 </div>
             </div>
         </div>
+        </>
     )
 }

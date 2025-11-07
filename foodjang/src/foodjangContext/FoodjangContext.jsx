@@ -1,14 +1,20 @@
 import { createContext } from "react";
-import { useContext } from "react";
 import { useState } from "react";
 import useMeals from "../api/MealsData";
+import { useEffect } from "react";
 
 export const FoodjangContext = createContext();
 
 export default function FoodjangProvider({children}){
     const data = useMeals();
     //빈배열
-    const [wishRecipes,setWishRecipes]=useState([]);
+    const [wishRecipes,setWishRecipes]=useState(()=>{
+        const saving = localStorage.getItem('wishrecipes')
+        return saving? JSON.parse(saving) : []
+    });
+    useEffect(()=>{
+        localStorage.setItem('wishrecipes',JSON.stringify(wishRecipes))
+    },[wishRecipes])
 
     //찜목록 추가하는함수
     const addwish = (food)=>{
@@ -39,18 +45,24 @@ export default function FoodjangProvider({children}){
         }else{
             return true;
         }
-        
     }
 
+    //로그인 정보
+    const [user,setUser]=useState(null)
+
+    const login =(userinput)=>{
+        setUser(userinput)
+    };
+    const logout = ()=>{
+        setUser(null)
+        alert('로그아웃 되었습니다.')
+    };
+
+
     return(
-        <FoodjangContext.Provider value={{wishRecipes,addwish,removewish,isinwish,data}}>
+        <FoodjangContext.Provider value={{wishRecipes,addwish,removewish,isinwish,data,setWishRecipes,login,logout,user}}>
             {children}
         </FoodjangContext.Provider>
 
     )
-
-
-
-
-
 }

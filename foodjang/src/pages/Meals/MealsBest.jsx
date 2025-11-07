@@ -17,7 +17,7 @@ export default function MealsBest({data}){
                 <li key={item.id}>
                     <Link to={`/detail/${item.id}`} onClick={()=>window.scrollTo(0,0)}><img alt={item.name} src={item.image}/></Link>
                     <p>{item.name}</p>
-                    <button className="wishbtn" onClick={()=>{isinwish(item.id)?removewish(item.id):addwish(item)}}>{isinwish(item.id)?'♥':'♡'}</button>
+                    <button className="wishbtn" onClick={()=>{isinwish(item.id)?removewish(item.id):addwish(item)}}>{isinwish(item.id)?'❤️':'🤍'}</button>
                 </li>
                 ))}
             </ul>

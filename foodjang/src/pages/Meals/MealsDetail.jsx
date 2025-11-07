@@ -1,8 +1,8 @@
 import { Link,useParams } from "react-router-dom";
 import './Meals.css'
-
+import { useNavigate } from 'react-router-dom'
 export default function MealsDetail({data}){
-
+const backpage = useNavigate();
 const{id} = useParams()
 const item = data.find((item)=>item.id === Number(id))
 //map을 안돌려도 useParams로 해당 id값을 받아올수있음
@@ -24,7 +24,7 @@ const item = data.find((item)=>item.id === Number(id))
                 </div>
             </div>
             }
-            <Link to='/' className="backtohome">메인 화면으로 돌아가기</Link>
+            <button className="backtohome" onClick={()=>backpage(-1)}>돌아가기</button>
         </>
     )
 }

@@ -18,6 +18,8 @@ import Home from './pages/Home/Home'
 import LoginForm from './common/LoginForm/LoginForm.jsx'
 import Wish from './pages/Wish/Wish.jsx'
 import FoodjangProvider from './foodjangContext/FoodjangContext.jsx'
+import Join from './pages/Join/Join.jsx'
+
 function App() {
   //호출 커스텀 훅
 const data = useMeals();
@@ -37,6 +39,7 @@ const data = useMeals();
             <Route path='/wish' element={<Wish data={data} />}/>  
             <Route path='/login' element={<LoginForm/>}/>
             <Route path='/detail/:id' element={<MealsDetail data={data} />}/>
+            <Route path='/join' element={<Join/>}/>
           </Routes>
         <Footer/>
       </FoodjangProvider>

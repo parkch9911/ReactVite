@@ -47,8 +47,12 @@ ul li img:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 ul li p{
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
     margin-bottom: 20px;
     font-size: 17px;
+    text-overflow: ellipsis;
 }
 .detail-wrap{
     margin-top: 100px;
@@ -115,5 +119,10 @@ ul li p{
 .wishbtn{
     margin-bottom: 15px;
     width: 200px;
-    background-color: rgb(245, 139, 160);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(212, 212, 212);
+}
+.wishbtn:hover{
+    background-color: rgb(212, 212, 212);
+    border: 1px solid rgb(212, 212, 212);
 }

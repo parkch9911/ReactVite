@@ -36,6 +36,24 @@ body{
     font-size: 12px;
     font-weight: 600;
     margin: 8px;
+    transition: 0.2s;
+}
+.Header-wrap .Header-top .Header-top-right a:hover{
+    color: rgb(117, 117, 117);
+}
+.Header-wrap .Header-top .Header-top-right button{
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: 600;
+    background-color: transparent;
+    transition: 0.2s;
+}
+.Header-wrap .Header-top .Header-top-right button:hover{
+    color: rgb(117, 117, 117);
+}
+.Header-wrap .Header-top .Header-top-right span{
+    color: black;
+    font-weight: bold;
 }
 .Header-wrap .Header-mid{
     width: 1000px;
@@ -85,10 +103,23 @@ body{
 .Header-wrap .Header-bottom a:hover{
     color: rgb(92, 22, 36);
 }
-
+.head-line{
+    width: 200%;
+    border-top: 1px solid rgb(204, 204, 204);
+    position: absolute;
+    top: 240px;
+    left: -100%;
+}
 /* ================================================================================== */
-
+.footer-line{
+    position: absolute;
+    width: 200%;
+    border-top: 3px solid crimson;
+    left: -100%;
+    margin-bottom: 30px;
+}
 .Footer-wrap{
+    padding-top: 10px;
     margin: 0 auto;
     margin: 30px 0;
 }

@@ -1,21 +1,38 @@
 
 import { Link } from "react-router-dom";
 import '../common.css'
+import { useNavigate} from 'react-router-dom'
+import { useContext } from "react";
+import { FoodjangContext } from "../../foodjangContext/FoodjangContext";
+import { useEffect } from "react";
 
 export default function Header(){
+
+    const {user,logout,login}=useContext(FoodjangContext)
+    const navigate = useNavigate();
+    const logoutHandle =()=>{
+        logout()
+        navigate('/')
+    }
+    console.log(user)
+
     return(
     <>
         <div className="top"></div>
         <div className="Header-wrap">
             <div className="Header-top">
                 <div className="Header-top-left">
-                    <Link>+BOOKMARK</Link>
+                    <Link>박찬하</Link>
                 </div>
                 <div className="Header-top-right">
-                   <Link to='/login'>로그인</Link>
-                   <Link>회원가입</Link>
+                   {user? //로그인하면 user값이 있으면
+                   <button onClick={logoutHandle}><span>{user}</span>님, 로그아웃</button>
+                   : //이게 초기 null값일때임. 
+                   <button onClick={()=>navigate('/login')} >로그인</button>
+                   }
+                   <Link>고객센터</Link>
+                   <Link to='/join'>회원가입</Link>
                    <Link to='/wish'>찜 목록</Link>
-                   <Link>장바구니</Link>
                 </div>
             </div>
             <div className="Header-mid">
@@ -37,6 +54,7 @@ export default function Header(){
                     <Link to='/rate/'>평점순</Link>
             </div>
         </div>
+        <div className="head-line"></div>
     </>
     )
 }
