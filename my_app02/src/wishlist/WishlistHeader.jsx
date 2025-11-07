@@ -1,6 +1,6 @@
 //위시리스트 헤더
 import { useContext } from "react";
-import { WishlistContext } from "./WishListContext";
+import { WishlistContext } from "./WishlistContext";
 import {Link} from 'react-router-dom';
 
 export default function WishListHeader(){

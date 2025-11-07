@@ -11,7 +11,27 @@ export default function WishlistProvider({children}){
 
     //찜 목록 받아와야하니까 빈배열로 만들기
     //찜한 항목을 저장할 상태변수 정의
-    const [wishlist,setWishlist]=useState([])
+    const [wishlist,setWishlist]=useState(()=>{
+        const saved = localStorage.getItem('wishlist');
+        return saved ? JSON.parse(saved) : []
+    })
+    // 저장된 찜 목록이 있으면 복원, 없으면 빈 배열 반환
+
+
+    // 1. Local Storage에서 최초 렌더시 1회만 불러오기
+    // useEffect 이용해서 작성
+    // useEffect(()=>{
+    //     const saved = localStorage.getItem('wishlist')
+    //     if(saved){
+    //         setWishlist(JSON.parse(saved)) // 상태 갱신
+    //     }
+    // },[])
+    // ========useEffect에서는 return은 cleanup 함수이기때문에 삭제될 수 있어서 if사용했다.
+
+    // 2. wishlist가 바뀔 때 마다 Localstorage에 저장이 되어야함
+    useEffect(()=>{
+        localStorage.setItem('wishlist',JSON.stringify(wishlist))
+    },[wishlist])
 
     // 찜한 상품이 찜목에 추가 하는 함수
     //이미 같은 id를 가진 상품이 존재하면 중복 추가 안됨
@@ -45,6 +65,13 @@ export default function WishlistProvider({children}){
         console.log('취소')
     }
 
+    //큰 의미는 없지만  localStorage 통째로 삭제
+    const clearWishlist = ()=>{
+        setWishlist([])
+        localStorage.removeItem('wishlist')
+    }
+
+
     //이미 찜 된 항목인지 확인하는 함수
     //해당 id의 상품객체가 존재하면 true, 없으면 false 반환
     //find()함수 이용
@@ -76,7 +103,8 @@ export default function WishlistProvider({children}){
             changeShow,
             addToWishlist,
             removeFromWishlist,
-            isinWishlist
+            isinWishlist,
+            clearWishlist
             }}>
 
             {children}

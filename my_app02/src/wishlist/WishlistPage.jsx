@@ -1,9 +1,9 @@
 // 여긴 찜목록 보기
 import { useContext } from "react";
-import { WishlistContext } from "./WishListContext";
+import { WishlistContext } from "./WishlistContext";
 
 export default function WishListPage(){
-    const {wishlist,removeFromWishlist}=useContext(WishlistContext)
+    const {wishlist,removeFromWishlist,clearWishlist}=useContext(WishlistContext)
     console.log()
     return(
         <div>
@@ -17,6 +17,7 @@ export default function WishListPage(){
                         <button type="button" onClick={()=>removeFromWishlist(item.id)}>삭제</button>
                     </li>
                 ))}
+                <button onClick={clearWishlist}>찜 전체 삭제</button>
              </ul>)
             }
         </div>
